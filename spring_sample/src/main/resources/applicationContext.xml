@@ -25,7 +25,7 @@
 
 <!-- autowire approach -->
 	<bean name="customerService"
-		class="com.pmuz.service.CustomerServiceImpl" autowire="constructor">
+		class="com.pmuz.service.CustomerServiceImpl" autowire="byType">
 	</bean>	
 
 
