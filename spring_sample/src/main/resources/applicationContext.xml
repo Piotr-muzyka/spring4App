@@ -11,10 +11,17 @@
 	<bean name="customerRepository"
 		class="com.pmuz.repository.HibernateCustomerRepositoryImpl" />
 
+<!-- setter injection approach -->
+<!-- 	<bean name="customerService" -->
+<!-- 		class="com.pmuz.service.CustomerServiceImpl"> -->
+<!-- 		<property name="customerRepository" ref="customerRepository" /> -->
+<!-- 	</bean> -->
+	
+<!-- constructor injection approach -->
 	<bean name="customerService"
 		class="com.pmuz.service.CustomerServiceImpl">
-		<property name="customerRepository" ref="customerRepository" />
-	</bean>
+		<constructor-arg index="0" ref="customerRepository" />
+	</bean>	
 
 </beans> 	
 
